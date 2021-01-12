@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="294825d3-5839-486c-b39c-95060aed0f92" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1kmmI4RLV0OusrrZ7m25bAbdoIc" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/com/test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$/out/production/javase" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.ReflectAnnotation">
+    <configuration name="Annotation1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test2.pannotation.Annotation1" />
+      <module name="javase" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test2.pannotation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Base" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test1.tthis.Base" />
+      <module name="javase" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChineseTest" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test1.sstatic.ChineseTest" />
+      <module name="javase" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ExtendTest" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test1.extend.ExtendTest" />
+      <module name="javase" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Reflect3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test2.preflect.Reflect3" />
+      <module name="javase" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test2.preflect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectAnnotation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test2.pannotation.ReflectAnnotation" />
+      <module name="javase" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test2.pannotation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectConstructor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test2.preflect.ReflectConstructor" />
+      <module name="javase" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test2.preflect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReflectMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test2.preflect.ReflectMethod" />
+      <module name="javase" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test2.preflect.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Base" />
+      <item itemvalue="Application.ChineseTest" />
+      <item itemvalue="Application.ExtendTest" />
+      <item itemvalue="Application.ReflectMethod" />
+      <item itemvalue="Application.ReflectConstructor" />
+      <item itemvalue="Application.Reflect3" />
+      <item itemvalue="Application.ReflectAnnotation" />
+      <item itemvalue="Application.Annotation1" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ReflectAnnotation" />
+        <item itemvalue="Application.Annotation1" />
+        <item itemvalue="Application.Reflect3" />
+        <item itemvalue="Application.ReflectConstructor" />
+        <item itemvalue="Application.ReflectMethod" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="294825d3-5839-486c-b39c-95060aed0f92" name="Default Changelist" comment="" />
+      <created>1606314057465</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606314057465</updated>
+      <workItem from="1606314061727" duration="542000" />
+      <workItem from="1606314710459" duration="2725000" />
+      <workItem from="1606399122467" duration="3225000" />
+      <workItem from="1606631930559" duration="9215000" />
+      <workItem from="1606743324054" duration="5694000" />
+      <workItem from="1606917650346" duration="4578000" />
+      <workItem from="1607177939884" duration="3398000" />
+      <workItem from="1607950893152" duration="7279000" />
+      <workItem from="1608128516241" duration="1332000" />
+      <workItem from="1608207132959" duration="4983000" />
+      <workItem from="1608290586760" duration="8441000" />
+      <workItem from="1608376058593" duration="9447000" />
+      <workItem from="1608447915334" duration="12200000" />
+      <workItem from="1608558468021" duration="3727000" />
+      <workItem from="1608639104698" duration="6688000" />
+      <workItem from="1608724465842" duration="8782000" />
+      <workItem from="1608785897340" duration="9926000" />
+      <workItem from="1608824115315" duration="6000" />
+      <workItem from="1608903537198" duration="3571000" />
+      <workItem from="1608965885165" duration="256000" />
+      <workItem from="1608968959695" duration="362000" />
+      <workItem from="1608970397429" duration="1041000" />
+      <workItem from="1609001864062" duration="1189000" />
+      <workItem from="1609165291081" duration="1502000" />
+      <workItem from="1609334453658" duration="5314000" />
+      <workItem from="1609657191705" duration="7571000" />
+      <workItem from="1609743752182" duration="19916000" />
+      <workItem from="1609847998907" duration="10944000" />
+      <workItem from="1610177035997" duration="493000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
