@@ -478,8 +478,46 @@ C（CNO，CNAME，CTEACHER）代表（课号，课名，教师）
 SC（SNO，CNO，SCGRADE）代表（学号，课号，成绩）
 问题：
 1，找出没选过“黎明”老师的所有学生姓名。
+select s.sname from s where sno not in(select t1.sno from sc t1 join c t2 on t1.cno = t2.cno where t2.cteacher='黎明')
 2，列出 2 门以上（含2 门）不及格学生姓名及平均成绩。
+第一步：列出2门以上（含两门）不及格学生姓名
+select sc.sno,s.sname
+from sc
+join s
+on sc.sno=s.sno
+where sc.scgrade<60
+group by sc.sno,s.sname
+having count(*)>=2;
+
+第二步：找出每一个学生的平均成绩
+select sno,avg(scgrade) as avgscore from sc group by sno;
+
+第三步：第一步和第二步联合
+select t1.sname,t2.avgscore
+from (select sc.sno,s.sname
+            form sc
+            join s
+            on sc.sno=s.sno
+            where sc.scgrade<60
+            group by sc.sno,s.sname
+            having count(*)>=2) t1
+join (select sc.sno,avg(sc.scgrade) as avgscore from sc group by sc.sno) t2
+on t1.sno=t2.sno;
+
 3，即学过 1 号课程又学过 2 号课所有学生的姓名。
+第一步：找出学过1号课程的学生
+select sno from sc where cno=1;
+
+第一步：找出学过2号课程的学生
+select sno from sc where cno=2;
+
+第三步：第一步和第二步联合
+select s.sname 
+from sc 
+join s
+on sc.sno=s.sno
+where sc.cno=1 and sc.sno 
+in(select sno from sc where cno=2);
 
 
 14、列出所有员工及领导的姓名
