@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>Thead Tbody Tfoot</title>
+</head>
+<body>
+    <table border="1px", width="300px">
+        <thead>
+            <tr align="center"  >
+                <td>a</td>
+                <td>b</td>
+                <td>c</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>a</td>
+                <td>b</td>
+                <!--合并单元格-->
+                <td rowspan="2">c</td>
+            </tr>
+            <tr>
+                <td colspan="2">a</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>a</th>
+                <th>b</th>
+                <th>c</th>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>
