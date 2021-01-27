@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<!--
+     HTML中嵌套使用CSS的三种方式：
+	• 在标签内部使用style属性来设置元素的CSS样式，这种方式称为内联定义方式
+	    语法格式：<标签 style="样式名:样式值;样式名:样式值"></标签>
+	• 在head标签中使用style块，这种方式被称为样式块方式
+		语法格式:
+           <head>
+            <style type="text/css">
+               选择器{
+                样式名：样式值；
+                样式名：样式值；
+                样式名：样式值；
+               }
+            </style>
+           </head>
+     • 在head里链入外部样式表文件，这种方式最常用。（将样式写到一个独立的xxx.css文件中，在需要的网页上直接引入css文件，样式就引入了
+        语法格式：
+            <link type="text/css" rel="stylesheet" ref="css文件的路径"/>
+-->
+<html>
+<head>
+    <title>css</title>
+    <meta charset="UTF-8">
+    <!-- use CSS method2-->
+    <style type="text/css">
+        span{/*  标签选择器*/
+            font-size: 88px;
+        }
+        #hh{ /*id选择器*/
+            background-color: aqua;
+        }
+        .gg{/*类选择器*/
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+        }
+    </style>
+    <!-- use CSS method3-->
+    <link type="text/css" rel="stylesheet" href="t.css" />
+</head>
+<body>
+    <!-- use CSS method1-->
+    <div style="width: 300px;height: 300px;background-color: aquamarine"></div>
+    <span id = "hh" > hello CSS</span>
+    <div class="gg"></div>
+    <a href="https://www.baidu.com">百度</a>
+    <span id="bai">点击我到百度</span>
+    <ul id="uu"></ul>
+    <div id="div">dfsfsf</div>
+</body>
+</html>

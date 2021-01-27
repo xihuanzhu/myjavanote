@@ -1,0 +1,13 @@
+a{
+    text-decoration: none;
+}
+#bai{
+    text-decoration: underline;
+
+    cursor: pointer;/* 鼠标样式：pointer小手 hand小手，但是可能浏览器不兼容*/
+}
+#div{
+    position: absolute;
+    background-color: brown;
+    width: 100px;
+}
