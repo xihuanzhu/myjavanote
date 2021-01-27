@@ -1,0 +1,37 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>JS</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var i;
+        alert("i = " + i);//输出i = undefined,undefined在js中是一个具体存在值
+
+        /*
+          JS方法定义：
+            第一种方式：
+            function 函数名(形式参数列表){
+            }
+            第二种方式:
+            函数名 = function(形式参数列表){
+            }
+
+         */
+        function sum(a, b) {
+            alert(a + b)
+        }
+        sum(2, 3, 4);//5,多余的不要，不会报错
+        sum(2);//输出NaN
+        sum();//输出NaN，非数字，是一个具体的值，因为默认值是undefined
+        sum("hjg");//输出undefined,因为数据不可加
+        //不可重载，后面定义的同名函数会将前面覆盖
+        // function sum(a) {
+        //     alert(a)
+        // }
+        //sum(1, 2);
+    </script>
+    <input type="button" onclick="sum(3, 8)"/>
+</body>
+</html>

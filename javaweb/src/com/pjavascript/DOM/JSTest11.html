@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>DOM编程-获取文本框的value</title>
+    <meta charset="UTF-8">
+</head>
+<body >
+
+
+    <script type="text/javascript">
+       window.onload = function () {
+           // var doc = window.document.getElementById("bb");//window可以省略
+           // alert(doc)
+           document.getElementById("but").onclick = function (ev) {
+               var doc = document.getElementById("bb");
+               alert(doc.value)
+               doc.value = "jj";
+           }
+       }
+    </script>
+    <input type="text" id = "bb" value="hello" onblur="alert(this.value)"/>
+    <input type="button" id="but" value="button"/>
+</body>
+</html>

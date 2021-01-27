@@ -1,0 +1,59 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>JS 常用事件</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <!--一定要先生成dom树再绑定事件啊，不然就会注册事件不成功，一般做法是把script代码放到后面，或者把绑定事件放到window,onload中 -->
+    <input type="button" id = "bb" value="button2" />
+    <input type="button" value="button3"  id = "bb2" />
+    <script type="text/javascript">
+        /*JS事件：
+            blur：失去焦点
+            focus：聚焦
+
+            click：单击
+            dblclick：双击
+
+            keydown：键盘按下
+            keyup：键盘弹起
+
+            change：下拉列表选中项改变，或文本框内容改变
+
+            load：页面加载完毕
+
+            mousedown：鼠标按下
+            mouseover：鼠标经过
+            mousemove：鼠标移动
+            mouseout：鼠标离开
+            mouseup：鼠标弹起
+
+            reset：表单重置
+            select：文本被选定
+            submit：表单提交
+
+         */
+        //sayHello被称为回调函数
+        //回调函数特点：自己把这个函数代码写出来了，但是这个函数不是自己负责调用，由其他函数负责调用
+        function sayHello() {
+            alert("hello js")
+        }
+        function sayHello1() {
+            alert("hello js")
+        }
+        /*
+        注册事件第二种方式：使用纯JS代码完成事件的注册
+        第一步：获取这个按钮对象
+         */
+        var myDoc = document.getElementById("bb");
+        myDoc.onclick = sayHello1;//这里千万不要加括号，不然就是错误的
+        var doc1 = document.getElementById("bb2");
+        doc1.onclick = function () { alert("匿名函数") }
+    </script>
+    <!-- 注册事件第一种方式，直接在标签中使用事件句柄-->
+    <input type="button"  onclick="sayHello()" value="button"/>
+
+</body>
+</html>

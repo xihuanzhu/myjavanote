@@ -1,0 +1,32 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>JS代码执行顺序</title>
+    <meta charset="UTF-8">
+</head>
+<body onload="ready()">
+
+
+    <script type="text/javascript">
+        function sayHello() {
+            alert("hello js")
+        }
+        function sayHello1() {
+            alert("hello js")
+        }
+        /*
+        ready注册是页面加载过程中，页面加载完成后执行ready，并在执行ready过程中注册点击事件，按钮点击时执行点击事件
+         */
+        function ready() {
+            var myDoc = document.getElementById("bb");
+            myDoc.onclick = sayHello1;//这里千万不要加括号，不然就是错误的
+            var doc1 = document.getElementById("bb2");
+            doc1.onclick = function () { alert("匿名函数") }
+        }
+    </script>
+    <input type="button"  onclick="sayHello()" value="button"/>
+    <input type="button" id = "bb" value="button2" />
+    <input type="button" value="button3"  id = "bb2" />
+</body>
+</html>

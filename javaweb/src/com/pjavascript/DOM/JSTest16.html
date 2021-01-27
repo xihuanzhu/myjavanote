@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>时钟</title>
+    <meta charset="UTF-8">
+
+</head>
+<body >
+
+
+    <script type="text/javascript">
+       window.onload = function () {
+
+       }
+       /*
+        window.setInterval()//每隔多少毫秒执行操作
+        用上面函数的返回值给window.clearInterval()则可以停止上面的函数执行
+        */
+       var date = new Date();
+       var year = date.getFullYear();
+       var month = date.getMonth();
+       var dayOfWeek = date.getDay();
+       var times = date.getTime();//获取毫秒数
+       document.write(date.toLocaleString())
+        /*
+        数组：
+        var arr = [], JS中数组不会越界，因为会自动扩容
+        创建数组对象：
+        var ar = new Array();\
+        ar.join(),用括号中的符号连接数组元素
+        ar.push()
+        ar.pop()
+        JS中数组有栈功能
+         */
+    </script>
+
+</body>
+</html>

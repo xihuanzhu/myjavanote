@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>js</title>
+</head>
+<body>
+<!--
+   use JS method2
+   脚本块的方式：
+   <script type="text/javascript">
+      script代码
+   </script>
+-->
+<script type="text/javascript">
+    /*
+    暴露在脚本块当中的程序，在页面打开的时候执行，并且遵循自上而下的顺序依次逐行执行(不需要事件触发
+    这块代码也可以放到head里，也可以多次出现
+     */
+    window.alert('hello js')//会阻塞页面的加载
+</script>
+<input type="button" value="button"/>
+</body>
+</html>

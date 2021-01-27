@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>设置table的tbody</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <script type="text/javascript">
+        var data = {
+            "total":2,
+            "emps":[{
+                "empno":"99", "sal":1
+            },{
+                "empno":"39", "sal":2
+            }]
+        }
+        function ff(){
+            var emps  = data.emps;
+            var html = "";
+            for( var i = 0;i < emps.length; i++){
+                var emp = emps[i];
+                html += "<tr>";
+                html += "<td>" + emp.empno + "</td>";
+                html += "<td>" + emp.sal + "</td>";
+                html += "</tr>";
+            }
+            document.getElementById('tt').innerHTML = html
+            //window.eval(html)
+        }
+    </script>
+    <input type="button" id="bf" value="bbbbb" onclick="ff()"/>
+    <table border="5px">
+        <tr>
+            <th>员工编号</th>
+            <th>员工资薪</th>
+        </tr>
+        <tbody id="tt">
+
+        </tbody>
+    </table>
+</body>
+</html>

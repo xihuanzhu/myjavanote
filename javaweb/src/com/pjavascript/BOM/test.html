@@ -1,0 +1,54 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        window.open();
+        window.close();
+        默认开启关闭（新）窗口
+        _self:
+        _blank:新窗口
+        _parent:
+        _top:
+         */
+        window.open("https://baidu.com", '_blank')
+        /*
+        弹出消息框：window.alert()
+        确认消息：window.confirm(), 确认返回true，取消返回false
+         */
+        /*
+        window.history.back()：后退
+        window.history.go(-1)：后退
+         */
+        /*
+        设置浏览器的地址：
+         */
+        function f() {
+            var doc = document.location;
+            var loc = window.location;
+            loc.href = "https://huya.com";
+            doc.href = "https://bilibili.com"
+        }
+        f()
+        /*
+        哪些方法可以向服务器发送请求：
+        1：表单提交
+        2：href
+        3: window.location
+        4:document.location
+        5:window.open()
+        6：直接在浏览器地址栏输入url，回车
+        以上所有请求都可以带数据给服务器，只有表单是动态的，其他都是死的
+         */
+        /*
+        将当前窗口设置为顶级窗口
+        if(window.self != window.top)
+            window.top.location = window.self.location;
+         */
+    </script>
+</body>
+</html>

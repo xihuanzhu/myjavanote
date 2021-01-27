@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>JS的void运算符</title>
+    <meta charset="UTF-8">
+</head>
+<body >
+
+
+    <script type="text/javascript">
+     /*
+     for in语句
+     with语句
+      */
+     //创建JS数组,跟python中list一样
+      var arr = [true, 1, 1.3, 'kk']  ;
+      //遍历数组，除了常规还有这种方法：
+        for(var i in arr){
+            alert(arr[i]);//和java的foreach不同之处在于这里是下标，foreach是元素
+        }
+        User = function (username, password) {
+            this.username = username;
+            this.password = password;
+        }
+        var u = new User("张三", '44');
+        for(var i in u){
+            alert(i);//属性名
+            alert(u[i]);
+        }
+        with(u){
+            alert(username + password);
+        }
+
+
+    </script>
+    <!--
+        void运算符的语法，void(表达式)
+        运算原理：执行表达式，但不返回任何结果，0可以换成其他数，但不能为空
+        其中javascript:的作用是一段JS代码，以下程序的javascript是不能省略的
+    -->
+    <br><br>
+    <!-- 如果href后面不是void，都会跳转到字符串页面，其中""表示当前路径-->
+    <a href="javascript:void(0)" onclick="window.alert('zhu')">既保留源格式，同时用户点击该超链接的时候执行一段JS代码，但页面不跳转</a>
+</body>
+</html>

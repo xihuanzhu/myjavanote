@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>JS_var</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        全局变量：
+            在函数体之外声明的变量属于全局变量，全局变量的生命周期是：浏览器打开声明，浏览器关闭销毁，尽量少用
+            因为他会一直在浏览器内存当中
+        局部变量：就正常局部变量
+         */
+        function f() {
+            vc = "list";//这样的话是全局变量
+            //var vc = "hh" 这样的话是局部变量
+        }
+        // window.alert("jj")
+        f();//这个必须要执行，不然vc就一定是未定义，代码会卡在下一行
+        alert(vc)//当vc未定义时代码会卡在这里，报Uncaught ReferenceError: vc
+        window.alert("jj")
+    </script>
+</body>
+</html>

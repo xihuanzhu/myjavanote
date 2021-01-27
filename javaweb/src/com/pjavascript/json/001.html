@@ -1,0 +1,56 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>json</title>
+</head>
+<body>
+    <!--
+    1.JSON:Javascript Object Notation(数据交换格式）
+    2.JSON主要作用：一种标准的数据交换格式
+    3.JSON是一种标准的轻量级的数据交换格式，特点是体积小，易解析。在实际开发中主流是JSON和XML，
+    XML严谨，体积大,解析麻烦，主要银行用
+    4.HTMl和XML有一个父亲：SGML（标准通用的标记语言）
+    -->
+    <script type="text/javascript">
+        //创建一个JSON对象(JSON也可以称为无类型，体积小，轻量级，易解析
+        var student = {
+            "sno" : "110",
+            "name": "zhuxihuan",
+            "sex": "male",
+            "address":{
+                "province": "hubei",
+                "city":"wuhan"
+            }
+        }
+        alert(student.name)//也可以student["name"]
+        //JSON数组
+        var ar = [{
+            "sno" : "110",
+            "name": "zhuxihuan",
+            "sex": "male"
+        },{
+            "sno" : '010',
+            "name": "zhuxihuan",
+            "sex": "male"
+        }]
+        /*
+        JSON语法格式：
+        var jsonObj = {
+           key:value,
+           key:value
+        }
+         */
+        /*
+        eval函数：将字符串当成一串代码解释并执行
+         */
+        window.eval("var i = 10");
+        alert(i)
+        /*
+        java连接数据库，查询数据之后，将数据在java程序中拼接成JSON格式的字符串，将JSON格式的字符串响应到服务器
+        这是可以用eval函数将其转换成json对象
+        在JS当中,[]数组，{}是json
+         */
+    </script>
+</body>
+</html>

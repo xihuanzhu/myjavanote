@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>去除字符串的前后空白trim</title>
+    <meta charset="UTF-8">
+
+</head>
+<body >
+
+
+    <script type="text/javascript">
+       window.onload = function () {
+            document.getElementById("but").onclick = function (ev) {
+                var em = document.getElementById("email");
+                alert(em.value);
+                alert((em.value.trim()))//IE8及以下没有trim函数，可以用prototype添加trim函数
+           }
+       }
+    </script>
+    <input type="text" id="email"/>
+    <span id="emailError" style="color: brown"> </span>
+    <input type="button" id="but" value="验证邮箱"/>
+    <!--正则表达式参考文章-->
+    <a href="https://blog.csdn.net/ZYC88888/article/details/98479629">正则表达式参考文章</a>
+</body>
+</html>

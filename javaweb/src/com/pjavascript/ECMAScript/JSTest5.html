@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>JS data type</title>
+</head>
+<body>
+    <script type="text/javascript">
+        /*
+        1. 虽然在JS中的变量在声明时不需要指定数据类型，但是在赋值，每一个数据还是有类型的
+        2. JS中数据有原始类型和引用类型
+            原始类型：Undefined,Number,String,Boolean,Null
+            引用类型：Object以及Object的子类
+        3.在ES6之后，除了以上类型，又提出了一种新类型：Symbol
+        4.JS中有一个运算符叫做typeof，这个运算符可以在程序运行阶段动态获取变量的数据类型
+        （比如+运算时希望数据都为数字，而不是其他），
+         语法格式：typeof 变量名，运算结果是以下6个字符串之一：注意字符串都是小写
+              "undefined"  "number" "string" "boolean" "object" "function"
+        5.在JS中比较字符串相等使用==，没有equal
+         */
+        var j = null;
+        alert(typeof j);//你以为他是Null？其实他返回Object，虽说null确实是Null类型
+    </script>
+</body>
+</html>
