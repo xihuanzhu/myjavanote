@@ -1,0 +1,26 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>jquery</title>
+    <script type="text/javascript">
+        /*
+        注意：属性那里的src会覆盖掉下面的代码，比如这样的<script type="text/javascript" src="">
+       会导致整个JS代码块失效
+         */
+        function $(name){
+            var obj = document.getElementById(name);
+            return obj;
+        }
+        function fff() {
+            var obj = $("txt1");
+            alert(obj.value);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1"/>
+    <input type="button" value="sayNo" onclick="fff()"/>
+    <button id="btnId" >SayHello</button>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>jQuery选择器</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./jquery-1.7.2/jquery.js"></script>
+    <script type="text/javascript">
+        /*jquery选择器
+        基础选择器：
+            $("#id属性值") ： id选择器，根据id查询签对象
+            $("标签名")：
+            $(".class属性值")：
+            组合选择器:$("标识，标识， ...")如$("div, span, p.myClass，#s")
+            $("*")：选择所有元素
+         */
+        $(function () {
+            $("p.myClass").css("background-color", "#bbffaa");
+            //$("div, #s, p.myClass").css("background-color", "#bbffaa");
+        })
+        /*
+        层级选择器：
+            $("父标识 子标识")：后代选择器，父标识下的所有子标识
+            $("父标识 > 子标识")：子选择器，父标识下的直属子标识（只算儿子，不算孙子以及之后）
+            $(“标识1 + 标识2”)：相邻元素选择器，选取标识1之后第一个同辈元素标识2(记住必须要紧贴）不然无效
+            $(“标识1 ~ 标识2”)：同辈元素选择器，选取标识1之后所有符合标识2的同辈元素
+         */
+        $(function () {
+            //$("form input").css("background-color", "#fdefca");
+            //$("form > input").css("background-color", "#fdefca");
+            //$("#in + input").css("background-color", "#fdefca");
+            //$("#in ~ input").css("background-color", "#fdefca");
+        })
+        /*
+        过滤选择器：
+            https://blog.csdn.net/csujiangyu/article/details/47776567
+
+        jQuery对象的val（）可以获取表单的value值
+         */
+    </script>
+</head>
+<body>
+    <div style="height: 100px">div</div>
+    <span id="s" style="width: 100px">span</span>
+    <p class="myClass" style="width: 100px"> myclass</p>
+    <p class="unMyClass" style="width: 100px">unmyclass</p>
+    <form action="www.baidu.com">
+        <input type="text" id="in" class="input1"/>
+        <input type="text" id="in2"/>
+        <div>
+            <input type="text"/>
+        </div>
+        <input type="button" value="kk"/>
+        <button>hhh</button>
+    </form>
+</body>
+</html>

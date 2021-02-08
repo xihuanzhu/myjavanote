@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>DOM增删改操作</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./jquery-1.7.2/jquery.js"></script>
+    <script type="text/javascript">
+        /*
+        内部插入：
+        appendTo()   a.appendTo(b)  把a插入到b子元素末尾，成为最后一个子元素
+        prependTo()  a.prependTo(b)  把a插到所有子元素前面，成为第一个子元素
+         */
+        $(function () {
+            $("<h1>hah</h1>").appendTo("body")
+        })
+        /*
+        外部插入：
+        insertAfter():  a.insertAfter(b)  得到ba
+        insertBefore():   a.insertBefore(b)   得到ab
+
+        替换：
+        replaceWit():  a.replaceWith(b)  用a替换掉b，替换掉第一个
+        replaceAll():   a.replaceAll(b)  用a替换掉所有b
+
+        删除：
+        remove():  a.remove()   删除a标签
+        empty():  a.empty()   清空a标签里的内容
+         */
+    </script>
+</head>
+<body>
+
+</body>
+</html>

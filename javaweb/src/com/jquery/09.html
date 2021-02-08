@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>jQuery其他事件处理方法</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./jquery-1.7.2/jquery.js"></script>
+    <script type="text/javascript">
+        /*
+      click(): 可以绑定单击事件，并可以触发单击事件
+      传function是绑定事件，
+
+      mouseover():  鼠标移入事件
+      mouseout():  鼠标移出事件
+      bind(): 可以给元素一次性绑定一个或多个事件
+      one(): 使用上跟bind一样，但是one方法绑定的事件只会响应一次
+      live(): 也是用来绑定事件，它可以用来绑定选择器匹配的所有元素的事件，哪怕这个元素是后面动态创建出来的也有效
+      unbind(): 跟bind方法相反的操作
+      */
+        $(function () {
+            // $("img").click(function () {
+            //     alert("img单击事件 == click方法绑定")
+            // })
+            // $("img").click()//触发
+            // $("button").click(function () {//绑定
+            //     $("img").click()
+            // })
+            // $("img").bind("click mouseover mouseout", function () {
+            //     alert("嘿嘿")
+            // })
+            $("button").live("click", function () {
+                alert("kk")
+            })
+            $("<button>ds</button>").appendTo("div")
+        })
+        /*
+        事件的冒泡：父子元素同时监听同一事件，当触发子元素的事件的时候，同一事件也被传递到了父元素的事件里去响应
+        如何阻止事件冒泡呢：在子事件函数体内，return false，可以阻止事件冒泡
+
+        事件对象，是一个封装有触发的事件的一个javascript对象
+        如何获取呢：在给元素绑定事件的时候，在事件的function(event)参数列表中添加一个参数，这个参数名，习惯取为event，
+        这个event就是javascript传递事件处理函数的事件对象
+         */
+        $(function () {
+            $("img").bind("mouseover mouseout", function (event) {
+                if(event.type() == "mouseover"){
+
+                }else if(event.type() == "mouseout"){
+
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>i am button</button>
+    <iframe src="http://localhost:8080"></iframe>
+    <img src="OIP.jpeg" alt="">
+    <div style="height: 100px"></div>
+</body>
+</html>

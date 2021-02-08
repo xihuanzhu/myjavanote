@@ -1,0 +1,127 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>作业</title>
+</head>
+<body>
+    <script type="text/javascript">
+        window.onload = function (ev) {
+            var usr = document.getElementById("username");
+            usr.onblur = function (ev1) {
+                var text = this.value.trim();
+                var rexExp = /^[0-9a-zA-Z]+$/;
+                var msg = "";
+                if(text == ""){
+                    msg += "用户名不能为空；"
+                }
+                if(msg == "" && (text.length > 14 || text.length < 6)){
+                    msg += "用户名长度不对；"
+                }
+                if(msg == "" && !rexExp.test(text)){
+                    msg += "格式不匹配;";
+                }
+                if(msg != ""){
+                    document.getElementById("uError").innerText = msg;
+                }
+            }
+            usr.onfocus = function () {
+                if(document.getElementById("uError").innerText != ""){
+                    this.value = ""
+                }
+                document.getElementById("uError").innerText = "";
+            }
+            var cPass = document.getElementById("checkPass")
+            cPass.onblur = function (ev1) {
+                var pass = document.getElementById("password").value;
+                if(pass != this.value){
+                    document.getElementById("pError").innerText = "请确保密码和确认密码一致"
+                }
+            }
+            cPass.onfocus = function (ev1) {
+                var g = document.getElementById("pError").innerText;
+                if(g != ""){
+                    this.value = "";
+                }
+                document.getElementById("pError").innerText = "";
+            }
+            var ema = document.getElementById("email");
+            ema.onblur = function (ev1) {
+                var text = this.value;
+                var regExp = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+                var flag = regExp.test(text)
+                if(!flag){
+                    document.getElementById("eError").innerText = "邮箱格式错误"
+                }
+            }
+            ema.onfocus = function (ev1) {
+                var g = document.getElementById("eError").innerText;
+                if(g != ""){
+                    this.value = "";
+                }
+                document.getElementById("eError").innerText = ""
+
+            }
+        }
+        function check() {
+            var fUsr = document.getElementById("uError").innerText;
+            var fPass = document.getElementById("pError").innerText;
+            var fEmail = document.getElementById("eError").innerText;
+            /*
+            最好使用focus和blur触发一下在判断，不然不对页面做任何操作也可以提交
+             */
+            document.getElementById("username").focus();
+            document.getElementById("username").blur();
+            if(fUsr == "" && fPass == "" && fEmail == ""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+    <form action="https://www.baidu.com" method="get">
+        <table id="msg">
+            <tr>
+                <td>用户名：</td>
+                <td>
+                    <input type="text" name="user" id="username"/>
+                </td>
+                <td>
+                    <span id="uError" style="font-size: 12px; color: brown"></span>
+                </td>
+            </tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input type="text" name="pass" id="password"/>
+                </td>
+            </tr>
+            <tr>
+                <td>确认密码：</td>
+                <td>
+                    <input type="text" id="checkPass"/>
+                </td>
+                <td>
+                    <span id="pError" style="font-size: 12px; color: brown" value=""></span>
+                </td>
+            </tr>
+            <tr>
+                <td>邮箱：</td>
+                <td>
+                    <input type="text" name="mm" id="email"/>
+                </td>
+                <td>
+                    <span id="eError" style="font-size: 12px; color: brown"></span>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align: center">
+                    <input type="submit" value="submit" onclick="return check()" />
+                </td>
+
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

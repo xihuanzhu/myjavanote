@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>jQuery属性操作</title>
+    <meta charset="UTF-8"/>
+    <script type="text/javascript" src="./jquery-1.7.2/jquery.js"></script>
+    <script type="text/javascript">
+        /*
+        html():它可以设置和获取起始标签和结束标签的内容，跟DOM属性innerHTML一样
+        text():它可以设置和获取起始标签和结束标签的文本，跟DOM属性innerText一样
+        val(): 它可以设置和获取表单项的value属性，跟DOM属性value一样
+         */
+        $(function () {
+            $("div").html("<h1>哈哈</h1>")//不传参数是获取
+            alert($(":radio").val())
+            // //批量操作单选
+            // $(":radio").val(["radio1"])
+            // //批量操作多选框选中状态
+            // $(":checkbox").val(["checkbox1", "checkbox3"])
+            //合在一起
+           // $(":radio, :checkbox").val(["radio1", "checkbox1", "checkbox3"])
+            alert($(":radio").attr("name"))//获取
+            $(":radio").attr("name", "abc")//设置
+        })
+        /*
+        attr():可以设置和获取属性值，不推荐操作checked，readOnly，selected， disabled，因为没设置情况下会返回
+                undefined，它可以根据用户自定义一些属性
+        prop():可以设置和获取属性值，只推荐操作上面不推荐的
+         */
+    </script>
+</head>
+<body>
+    <div> 我是div标签<span>我是span标签</span></div>
+    <input type="radio" name="radio" value="radio" />radio
+    <input type="radio" name="radio" value="radio1"/>radio1
+
+    <input type="checkbox" name="checkbox" value="checkbox1"/>checkbox1
+    <input type="checkbox" name="checkbox" value="checkbox2"/>checkbox2
+    <input type="checkbox" name="checkbox" value="checkbox3"/>checkbox3
+</body>
+</html>

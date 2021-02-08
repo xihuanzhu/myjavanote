@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>jquery</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./jquery-1.7.2/jquery.js"></script>
+    <script type="text/javascript" >
+        /*
+         $是jquery核心函数，能完成jQuery狠多功能：$()
+         当传入参数为函数时：表示页面加载完成后执行该函数。相当于windows.onload = function(){}
+         当传入参数为HTML字符串时：会根据字符串创建元素节点对象
+         当传入参数为选择器字符串（跟css选择器一样呢）时，
+            $("#id属性值") ： id选择器，根据id查询签对象
+            $("标签名")：
+            $(".class属性值")：
+         当传入参数为DOM对象时：会把这个DOM对象([object HTMLInputElement])转换为jQuery对象([object Object])
+
+         jQuery对象不能使用DOM对象的属性和方法，DOM对象也不能使用jQuery对象的属性和方法
+
+         jQuery对象和DOM对象的相互转换：
+         DOm->jQuery:先有DOM对象，然后$(DOM对象）
+         jQuery->DOM:先有jQuery对象，然后jQuery对象[下标]取出对应的DOM对象
+         */
+        $(function () {
+            alert('page finish load');
+            $(" <div>" +
+                "        <span>div_span1</span>" +
+                "        <span>div_span2</span>" +
+                "    </div>").appendTo("body")
+            $('<input type="button" value="say"/>').appendTo("body");
+            var $jj = $("input");
+            for(var i = 0; i < $jj.length; i++){
+                alert($jj[i])//输出都是DOM对象，说明jQuery对象是DOM对象数组
+            }
+            // var obj = document.getElementById("bt");
+            // alert(obj)
+            // alert($(obj))
+        });
+
+    </script>
+</head>
+<body>
+<!--    <div>-->
+<!--        <span>div_span1</span>-->
+<!--        <span>div_span2</span>-->
+<!--    </div>-->
+    <input type="button" value="say" id="bt" class="but"/>
+</body>
+</html>

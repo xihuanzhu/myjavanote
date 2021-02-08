@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>jQuery事件操作</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./jquery-1.7.2/jquery.js"></script>
+    <script type="text/javascript">
+        /*
+        $(function () {})和window.onload = function () {}的区别：
+        执行顺序：jQuery是在js原生onload之前执行的前
+        他们是在什么时候触发的:
+            1.jQuery的页面加载完成之后是浏览器内核解析完页面的标签创建好DOM对象之后就会马上执行
+            2.原生js的页面加载完成之后，除了要等浏览器内核解析完成标签创建好DOM对象，还要等标签显示时需要的内容加载完成（比如src
+        执行次数：
+            原生js的页面加载完成之后，只会执行最后一次的赋值函数
+            jQuery的页面加载完成之后，会依次按顺序把所有$(function)执行一次
+      */
+        window.onload = function (ev) {
+            alert("原生加载")
+        }
+        /*
+        近似于
+        $(document).ready(){}
+         */
+        $(function () {
+            alert("jQuery加载")
+        })
+    </script>
+</head>
+<body>
+    <button>i am button</button>
+    <iframe src="http://localhost:8080"></iframe>
+    <img src="OIP.jpeg" alt="">
+</body>
+</html>

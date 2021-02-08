@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>jQuery动画</title>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="./jquery-1.7.2/jquery.js"></script>
+    <script type="text/javascript">
+        /*
+            shoW()  将隐藏的元素显示
+            hide()  将可见的元素隐藏
+            toggle()  可见就隐藏，不可见就显示
+
+            以上函数都可以添加参数：
+                第一个参数是动画执行的时长，以毫秒为单位
+                第二个参数是动画执行后的回调函数
+                fadeTo第二个参数是to的指定值，第三个才是回调函数
+         */
+        $(function () {
+            $("#div1").fadeOut(1000, function(){
+                alert("hha")
+            })
+        })
+        /*
+        fadeIn()  淡入（慢慢可见）
+        fadeOut()   淡出（慢慢不可见）
+        fadeTo()  淡化到  在指定时长下慢慢的将透明度修改到指定的值，0不可见，1完全可见
+        fadeToggle() 淡化切换  淡入/淡出
+
+
+         */
+    </script>
+</head>
+<body>
+    <div id="div1" style="background-color: chartreuse;height: 100px ">
+        jquery动画定义了很多种动画效果，可以很方便使用这些动画效果
+    </div>
+</body>
+</html>
