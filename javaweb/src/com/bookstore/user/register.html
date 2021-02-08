@@ -1,0 +1,175 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../jquery/jquery-1.7.2/jquery.js"></script>
+    <title>注册</title>
+    <style type="text/css">
+        .register_form{
+            height: 420px;
+            margin-top: 25px;
+        }
+    </style>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body style="background-color: aquamarine">
+    <script type="text/javascript">
+        window.onload = function (ev) {
+            var usr = document.getElementById("username");
+            usr.onblur = function (ev1) {
+                var text = this.value.trim();
+                var rexExp = /^[0-9a-zA-Z]+$/;
+                var msg = "";
+                if(text == ""){
+                    msg += "用户名不能为空；"
+                }
+                if(msg == "" && (text.length > 14 || text.length < 6)){
+                    msg += "用户名长度不对；"
+                }
+                if(msg == "" && !rexExp.test(text)){
+                    msg += "格式不匹配;";
+                }
+                if(msg != ""){
+                    document.getElementById("uError").innerText = msg;
+                }
+            }
+            usr.onfocus = function () {
+                if(document.getElementById("uError").innerText != ""){
+                    this.value = ""
+                }
+                document.getElementById("uError").innerText = "";
+            }
+            var cPass = document.getElementById("checkPass")
+            cPass.onblur = function (ev1) {
+                var pass = document.getElementById("password").value;
+                if(pass != this.value){
+                    document.getElementById("pError").innerText = "请确保密码和确认密码一致"
+                }
+            }
+            cPass.onfocus = function (ev1) {
+                var g = document.getElementById("pError").innerText;
+                if(g != ""){
+                    this.value = "";
+                }
+                document.getElementById("pError").innerText = "";
+            }
+            var ema = document.getElementById("email");
+            ema.onblur = function (ev1) {
+                var text = this.value;
+                var regExp = /^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
+                var flag = regExp.test(text)
+                if(!flag){
+                    document.getElementById("eError").innerText = "邮箱格式错误"
+                }
+            }
+            ema.onfocus = function (ev1) {
+                var g = document.getElementById("eError").innerText;
+                if(g != ""){
+                    this.value = "";
+                }
+                document.getElementById("eError").innerText = ""
+
+            }
+        }
+        function check() {
+            var fUsr = document.getElementById("uError").innerText;
+            var fPass = document.getElementById("pError").innerText;
+            var fEmail = document.getElementById("eError").innerText;
+            /*
+            最好使用focus和blur触发一下在判断，不然不对页面做任何操作也可以提交
+             */
+            document.getElementById("username").focus();
+            document.getElementById("username").blur();
+            if(fUsr == "" && fPass == "" && fEmail == ""){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+    <div id="register_head">
+        <img class="logo_image" alt="" src="tt.jpeg" style="height: 30px">
+    </div>
+    <div class="register_banner">
+        <div id="l_content">
+            <span class="register_word">欢迎注册</span>
+        </div>
+        <div id="content">
+            <div class="register_form">
+                <div class="register_box">
+                    <div class="tit">
+                        <h1>注册书城会员</h1>
+                        <span class="errorMsg">
+
+                        </span>
+                    </div>
+                    <div class="form">
+                        <form action="register_success.html" method="get">
+                            <table id="msg">
+                                <tr>
+                                    <td>用户名：</td>
+                                    <td>
+                                        <input type="text" class="itxt" name="user" id="username"
+                                                autocompete="off" tabindex="1"/>
+                                    </td>
+                                    <td>
+                                        <span id="uError" style="font-size: 12px; color: brown"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>密码：</td>
+                                    <td>
+                                        <input type="text" class="itxt" name="pass" id="password"
+                                               autocompete="off" tabindex="1"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>确认密码：</td>
+                                    <td>
+                                        <input type="text" class="itxt" id="checkPass"
+                                               autocompete="off" tabindex="1"/>
+                                    </td>
+                                    <td>
+                                        <span id="pError" style="font-size: 12px; color: brown" value=""></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>邮箱：</td>
+                                    <td>
+                                        <input type="text" class="itxt" name="mm" id="email"
+                                               autocompete="off" tabindex="1"/>
+                                    </td>
+                                    <td>
+                                        <span id="eError" style="font-size: 12px; color: brown"></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label>验证码:</label>
+                                    </td>
+                                    <td>
+                                        <input type="text" class="itxt" style="..." id="code"/>
+
+                                    </td>
+                                    <td>
+                                        <img src="tt.jpeg" alt="" style="height: 10px">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2" style="text-align: center">
+                                        <input type="submit" value="submit" id="sub_btn" onclick="return check()" />
+                                    </td>
+
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
